@@ -18,7 +18,21 @@ public class Contact {
 	private String street;
 	private String city;
 	private Integer pin;
+	private String mobile;
+	private String telephone;
 	
+	public String getMobile() {
+		return mobile;
+	}
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+	public String getTelephone() {
+		return telephone;
+	}
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
+	}
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "mobile_id", referencedColumnName = "id")
 	public Integer getId() {
